@@ -5,10 +5,13 @@ import os
 
 def get_credentials() -> dict[str, str]:
     """
-    Get developer-provided credentials from environment.
+    Get developer-provided Twilio credentials from environment.
 
-    Developer sets this in env vars, user doesn't need to provide anything.
+    Set as env vars on the hosted server. Users don't need to provide anything.
     """
     return {
-        "api_key": os.environ.get("API_KEY", ""),
+        "account_sid": os.environ.get("TWILIO_ACCOUNT_SID", ""),
+        "api_key_sid": os.environ.get("TWILIO_API_KEY_SID", ""),
+        "api_key_secret": os.environ.get("TWILIO_API_KEY_SECRET", ""),
+        "from_number": os.environ.get("TWILIO_FROM_NUMBER", ""),
     }

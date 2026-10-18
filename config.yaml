@@ -1,9 +1,13 @@
 name: "Twilio SMS"
-description: "Send SMS text messages via Twilio. Tools: send_sms(to, body), get_message_status(sid)."
+description: "Send SMS text messages via Twilio and check delivery status."
 icon: "assets/icon.png"
 
 auth:
   type: none
 tools:
-  - name: "example_tool"
-    description: "Example tool demonstrating credential usage"
+  - name: "send_sms"
+    description: "Send an SMS text message to a phone number via Twilio"
+  - name: "get_message_status"
+    description: "Get delivery status and details of a sent SMS by message SID"
+  - name: "list_messages"
+    description: "List recent SMS messages, optionally filtered by recipient or sender"
