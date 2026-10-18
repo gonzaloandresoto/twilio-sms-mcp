@@ -1,0 +1,9 @@
+name: "Twilio SMS"
+description: "Send SMS text messages via Twilio. Tools: send_sms(to, body), get_message_status(sid)."
+icon: "assets/icon.png"
+
+auth:
+  type: none
+tools:
+  - name: "example_tool"
+    description: "Example tool demonstrating credential usage"
